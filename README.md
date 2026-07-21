@@ -38,8 +38,8 @@ Click-Bot-Attribution-Ad-Fraud-Auditor/
 - [x] Project setup
 - [x] GitHub repository
 - [x] GA4 dataset imported
-- [ ] Data cleaning
-- [ ] Exploratory Data Analysis
+- [x] Data cleaning
+- [x] Exploratory Data Analysis
 - [ ] Feature Engineering
 - [ ] Bot Detection
 - [ ] Isolation Forest Model

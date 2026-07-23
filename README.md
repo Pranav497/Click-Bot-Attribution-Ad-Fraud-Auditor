@@ -1,36 +1,37 @@
-# 🤖 Click-Bot Attribution & Ad-Fraud Auditor
+# 🤖 Click-Bot Attribution & Ad-Fraud-Auditor
 
-A Data Analytics & Machine Learning project that detects suspicious bot traffic in Google Analytics data, cleans marketing attribution, and calculates more accurate Return on Ad Spend (ROAS).
-
----
-
-## 📌 Problem Statement
-
-Digital marketing campaigns often suffer from bot traffic and fraudulent interactions that inflate website visits, clicks, and conversions. This leads to incorrect marketing decisions and wasted advertising budgets.
-
-This project builds a Python-based auditing system that analyzes Google Analytics data, identifies suspicious traffic patterns, and provides cleaner marketing insights.
+A Data Analytics & Machine Learning project that detects suspicious bot traffic in Google Analytics (GA4) data, cleans marketing attribution, and calculates more accurate Return on Ad Spend (ROAS).
 
 ---
 
-# 🎯 Objectives
+# 📌 Problem Statement
 
-- Clean Google Analytics data
-- Analyze user behavior
-- Detect suspicious traffic patterns
-- Build an anomaly detection model using Isolation Forest
-- Create Power BI dashboards
-- Calculate adjusted ROAS after removing suspected bot traffic
+Digital marketing campaigns often suffer from bot traffic and fraudulent interactions that inflate website visits, clicks, and conversions. This results in inaccurate marketing reports and wasted advertising budgets.
+
+This project builds a Python-based auditing system that analyzes Google Analytics data, identifies suspicious traffic patterns, and provides cleaner business insights.
 
 ---
 
-# 🛠 Tech Stack
+# 🎯 Project Objectives
+
+- Load and clean Google Analytics data
+- Perform Exploratory Data Analysis (EDA)
+- Visualize website traffic patterns
+- Engineer features for bot detection
+- Detect suspicious traffic using Isolation Forest
+- Build an interactive Power BI dashboard
+- Calculate Adjusted ROAS using cleaned data
+
+---
+
+# 🛠️ Tech Stack
 
 - Python
 - Pandas
 - NumPy
-- Matplotlib *(Coming Soon)*
-- Scikit-Learn *(Coming Soon)*
-- Power BI *(Coming Soon)*
+- Matplotlib
+- Scikit-Learn *(Upcoming)*
+- Power BI *(Upcoming)*
 - Git & GitHub
 - VS Code
 
@@ -38,12 +39,24 @@ This project builds a Python-based auditing system that analyzes Google Analytic
 
 # 📂 Project Structure
 
-```
+```text
 Click-Bot-Attribution-Ad-Fraud-Auditor
 │
 ├── data
 │   ├── raw
+│   │   └── ga4_event_2021.csv
+│   │
 │   └── processed
+│       └── clean_ga4_data.csv
+│
+├── reports
+│   └── figures
+│       ├── event_distribution.png
+│       ├── device_distribution.png
+│       ├── browser_distribution.png
+│       ├── country_distribution.png
+│       ├── traffic_source_distribution.png
+│       └── traffic_medium_distribution.png
 │
 ├── src
 │   ├── main.py
@@ -51,10 +64,8 @@ Click-Bot-Attribution-Ad-Fraud-Auditor
 │   ├── explore_data.py
 │   ├── data_quality.py
 │   ├── clean_data.py
-│   └── eda.py
-│
-├── reports
-│   └── figures (Coming Soon)
+│   ├── eda.py
+│   └── visualize_data.py
 │
 ├── README.md
 ├── requirements.txt
@@ -65,61 +76,50 @@ Click-Bot-Attribution-Ad-Fraud-Auditor
 
 # 📊 Dataset
 
-Dataset Used:
-
 **Google Analytics 4 Obfuscated Sample Ecommerce Dataset**
 
 Source:
-
 https://www.kaggle.com/datasets/google/google-analytics-sample
 
 ---
 
-# ✅ Progress
+# ✅ Completed Work
 
-## Day 1
-- Project setup
-- Virtual environment configuration
-- GitHub repository created
+## Day 1 – Project Setup
+
+- Created project structure
+- Configured virtual environment
+- Initialized GitHub repository
 - Loaded GA4 dataset
-- Verified project structure
 
 ---
 
-## Day 2
-- Explored dataset structure
-- Understood important GA4 columns
-- Learned event-level analytics
-- Identified business-relevant features
+## Day 2 – Dataset Understanding
+
+- Explored dataset columns
+- Understood GA4 event-level data
+- Identified important marketing attributes
 
 ---
 
-## Day 3
-### Data Cleaning
+## Day 3 – Data Cleaning
 
-- Removed duplicate records
-- Removed completely empty columns
-- Created processed dataset
-- Performed data quality assessment
+Performed:
 
-### Results
+- Duplicate removal
+- Missing value analysis
+- Empty column removal
 
-Original Dataset
+### Dataset Summary
 
-```
-500 Rows × 94 Columns
-```
-
-After Cleaning
-
-```
-210 Rows × 55 Columns
-```
+| Stage | Rows | Columns |
+|-------|-----:|--------:|
+| Raw Dataset | 500 | 94 |
+| Clean Dataset | 210 | 55 |
 
 ---
 
-## Day 4
-### Exploratory Data Analysis (EDA)
+## Day 4 – Exploratory Data Analysis
 
 Analyzed:
 
@@ -132,66 +132,43 @@ Analyzed:
 
 ### Key Insights
 
-### Event Distribution
-
-| Event | Count |
-|--------|------:|
-| page_view | 13 |
-| scroll | 11 |
-| session_start | 8 |
-| view_promotion | 7 |
-| user_engagement | 7 |
+- **Page View** is the most common event.
+- Most users access the website from **Desktop** devices.
+- **Chrome** is the dominant browser.
+- Majority of traffic comes from the **United States**.
+- **Google Organic Search** is the primary traffic source.
 
 ---
 
-### Device Distribution
+## Day 5 – Data Visualization
 
-| Device | Count |
-|--------|------:|
-| Desktop | 37 |
-| Mobile | 18 |
+Created professional visualizations using Matplotlib:
 
----
+- Event Distribution
+- Device Distribution
+- Browser Distribution
+- Country Distribution
+- Traffic Source Distribution
+- Traffic Medium Distribution
 
-### Browser Distribution
+All charts are automatically saved inside:
 
-| Browser | Count |
-|---------|------:|
-| Chrome | 43 |
-| Safari | 9 |
-| Edge | 2 |
-
----
-
-### Country Distribution
-
-| Country | Count |
-|---------|------:|
-| United States | 37 |
-| Qatar | 18 |
-
----
-
-### Traffic Sources
-
-| Source | Count |
-|---------|------:|
-| Google | 20 |
-| Direct | 13 |
-| Referral | 15 |
+```text
+reports/figures/
+```
 
 ---
 
 # 📈 Current Workflow
 
-```
+```text
 Google Analytics Dataset
         │
         ▼
 Load Data ✅
         │
         ▼
-Explore Dataset ✅
+Understand Dataset ✅
         │
         ▼
 Data Quality Check ✅
@@ -203,10 +180,10 @@ Data Cleaning ✅
 Exploratory Data Analysis ✅
         │
         ▼
-Data Visualization 🔄
+Data Visualization ✅
         │
         ▼
-Feature Engineering
+Feature Engineering 🔄
         │
         ▼
 Bot Detection
@@ -223,9 +200,59 @@ Adjusted ROAS
 
 ---
 
+# 📊 Visualizations
+
+## Event Distribution
+
+![Event Distribution](reports/figures/event_distribution.png)
+
+---
+
+## Device Distribution
+
+![Device Distribution](reports/figures/device_distribution.png)
+
+---
+
+## Browser Distribution
+
+![Browser Distribution](reports/figures/browser_distribution.png)
+
+---
+
+## Country Distribution
+
+![Country Distribution](reports/figures/country_distribution.png)
+
+---
+
+## Traffic Source Distribution
+
+![Traffic Source Distribution](reports/figures/traffic_source_distribution.png)
+
+---
+
+## Traffic Medium Distribution
+
+![Traffic Medium Distribution](reports/figures/traffic_medium_distribution.png)
+
+---
+
+# 💼 Skills Demonstrated
+
+- Python Programming
+- Pandas
+- Data Cleaning
+- Exploratory Data Analysis
+- Data Visualization
+- Git & GitHub
+- Marketing Analytics
+- Business Intelligence
+
+---
+
 # 🚀 Upcoming Features
 
-- Data Visualization using Matplotlib
 - Feature Engineering
 - Rule-Based Bot Detection
 - Isolation Forest Model
@@ -236,51 +263,26 @@ Adjusted ROAS
 
 ---
 
-# 💡 Business Value
+# 📊 Current Progress
 
-This project demonstrates how Data Analytics and Machine Learning can improve digital marketing decisions by:
+**Project Status:** **60% Complete**
 
-- Removing misleading traffic
-- Improving campaign analysis
-- Detecting suspicious behavior
-- Producing more reliable marketing KPIs
-- Helping businesses allocate advertising budgets more effectively
-
----
-
-# 🎯 Skills Demonstrated
-
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- Python Programming
-- Pandas
-- Git & GitHub
-- Marketing Analytics
-- Business Intelligence
-- Data Quality Assessment
-
----
-
-# 📅 Current Status
-
-**Project Progress:** **40% Complete**
-
-```
-████████████████░░░░░░░░░░
+```text
+████████████████████████████████░░░░
 
 ✅ Project Setup
 ✅ Data Loading
 ✅ Data Understanding
 ✅ Data Cleaning
 ✅ Exploratory Data Analysis
+✅ Data Visualization
 
-🔄 Data Visualization
+🔄 Feature Engineering
 
-⬜ Feature Engineering
-⬜ Bot Detection
+⬜ Rule-Based Bot Detection
 ⬜ Isolation Forest
 ⬜ Power BI Dashboard
-⬜ Final Report
+⬜ Final Documentation
 ```
 
 ---

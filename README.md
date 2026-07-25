@@ -1,36 +1,42 @@
 # 🛡️ Click-Bot Attribution & Ad-Fraud Auditor
 
-A Data Analytics and Machine Learning project that detects suspicious bot traffic in Google Analytics 4 (GA4) event data using Python, feature engineering, rule-based detection, and anomaly detection techniques.
+A Data Analytics and Machine Learning project that analyzes Google Analytics 4 (GA4) event data to identify suspicious traffic, detect potential bot behavior, and improve the reliability of digital marketing attribution.
+
+The project combines data cleaning, exploratory data analysis, feature engineering, rule-based detection, session-level analysis, and Isolation Forest anomaly detection.
 
 ---
 
 ## 📌 Project Overview
 
-Digital marketing campaigns often receive invalid traffic from bots, automated scripts, and fake clicks. This project analyzes Google Analytics 4 (GA4) event data to identify suspicious user behavior, improve traffic quality, and support more accurate marketing decisions.
+Digital marketing campaigns can receive invalid traffic from bots, automated scripts, and unusual user behavior. This can distort engagement metrics and make marketing performance appear better or worse than it actually is.
 
-The project follows a complete data analytics workflow:
+This project processes GA4 event data to:
 
-- Data Loading
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- Data Visualization
-- Feature Engineering
-- Rule-Based Bot Detection
-- Machine Learning (Upcoming)
-- Power BI Dashboard (Upcoming)
+- Clean and validate analytics data
+- Understand user and traffic behavior
+- Engineer behavioral features
+- Detect suspicious activity using rule-based logic
+- Aggregate event data into sessions
+- Detect anomalous sessions using Isolation Forest
+- Compare rule-based and machine-learning results
+- Prepare data for a Power BI marketing dashboard
 
 ---
 
 ## 🎯 Objectives
 
-- Clean and preprocess GA4 event data.
-- Perform exploratory data analysis.
-- Visualize user behavior.
-- Engineer meaningful features.
-- Detect suspicious traffic using rule-based logic.
-- Build an Isolation Forest anomaly detection model.
-- Create an interactive Power BI dashboard.
-- Generate actionable marketing insights.
+- Clean and preprocess GA4 event data
+- Understand the structure of flattened GA4 exports
+- Perform exploratory data analysis
+- Visualize traffic and user behavior
+- Create behavioral features
+- Detect suspicious traffic using rule-based detection
+- Create session-level features
+- Apply Isolation Forest anomaly detection
+- Compare rule-based and ML results
+- Build a Power BI dashboard
+- Generate marketing and attribution insights
+- Analyze adjusted marketing performance after suspicious traffic filtering
 
 ---
 
@@ -42,13 +48,14 @@ The project follows a complete data analytics workflow:
 - Matplotlib
 - Scikit-learn
 - Power BI
-- Git & GitHub
+- Git
+- GitHub
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-```
+```text
 Click-Bot-Attribution-Ad-Fraud-Auditor/
 │
 ├── data/
@@ -58,7 +65,9 @@ Click-Bot-Attribution-Ad-Fraud-Auditor/
 │   └── processed/
 │       ├── clean_ga4_data.csv
 │       ├── featured_ga4_data.csv
-│       └── bot_detection_data.csv
+│       ├── bot_detection_data.csv
+│       ├── ml_bot_detection_data.csv
+│       └── session_level_data.csv
 │
 ├── src/
 │   ├── load_data.py
@@ -67,7 +76,9 @@ Click-Bot-Attribution-Ad-Fraud-Auditor/
 │   ├── explore_data.py
 │   ├── visualize_data.py
 │   ├── feature_engineering.py
-│   └── bot_detection.py
+│   ├── bot_detection.py
+│   ├── isolation_forest.py
+│   └── session_features.py
 │
 ├── outputs/
 │   └── charts/
@@ -75,196 +86,3 @@ Click-Bot-Attribution-Ad-Fraud-Auditor/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-```
-
----
-
-# ✅ Progress
-
-| Stage | Status |
-|--------|--------|
-| Project Setup | ✅ |
-| Data Loading | ✅ |
-| Data Understanding | ✅ |
-| Data Cleaning | ✅ |
-| Exploratory Data Analysis | ✅ |
-| Data Visualization | ✅ |
-| Feature Engineering | ✅ |
-| Rule-Based Bot Detection | ✅ |
-| Isolation Forest | ⏳ |
-| Power BI Dashboard | ⏳ |
-| Marketing Insights | ⏳ |
-
----
-
-# 📊 Exploratory Data Analysis
-
-The cleaned dataset contains:
-
-- **210 rows**
-- **55 columns**
-
-### Event Distribution
-
-- Page Views
-- Scroll Events
-- Session Starts
-- User Engagement
-- Promotions
-- Item Views
-
-### Device Distribution
-
-- Desktop
-- Mobile
-
-### Browser Distribution
-
-- Chrome
-- Safari
-- Edge
-
-### Geographic Analysis
-
-- United States
-- Qatar
-
-### Traffic Sources
-
-- Google
-- Direct
-- Referral
-- Organic
-
----
-
-# ⚙️ Feature Engineering
-
-Created the following features:
-
-| Feature | Description |
-|----------|-------------|
-| engagement_time | User engagement time (milliseconds) |
-| session_number | Session count |
-| engaged_session | Engaged session indicator |
-| entrance_flag | Landing page indicator |
-
----
-
-# 🤖 Rule-Based Bot Detection
-
-Implemented a rule-based fraud detection system using multiple behavioral indicators.
-
-### Rules
-
-- Very low engagement time
-- Page views with very low engagement
-- Direct traffic with very low engagement
-- Desktop traffic with very low engagement
-
-Each triggered rule contributes to a **Risk Score**.
-
-```
-Risk Score >= 2
-↓
-
-Bot
-```
-
----
-
-## 📈 Current Results
-
-| Metric | Value |
-|---------|------:|
-| Total Events | 210 |
-| Suspected Bots | 1 |
-| Normal Events | 209 |
-| Bot Percentage | 0.48% |
-
----
-
-# 📷 Visualizations
-
-Generated charts include:
-
-- Event Distribution
-- Device Distribution
-
-More dashboards will be added using Power BI.
-
----
-
-# 🚀 Upcoming Work
-
-- Isolation Forest anomaly detection
-- Compare ML vs Rule-Based detection
-- Power BI dashboard
-- Marketing insights
-- Adjusted ROAS analysis
-
----
-
-# 💻 How to Run
-
-Clone the repository
-
-```bash
-git clone https://github.com/Pranav497/Click-Bot-Attribution-Ad-Fraud-Auditor.git
-```
-
-Move into the project
-
-```bash
-cd Click-Bot-Attribution-Ad-Fraud-Auditor
-```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Run scripts
-
-```bash
-python src/load_data.py
-
-python src/clean_data.py
-
-python src/explore_data.py
-
-python src/visualize_data.py
-
-python src/feature_engineering.py
-
-python src/bot_detection.py
-```
-
----
-
-# 📅 Roadmap
-
-- [x] Data Loading
-- [x] Data Cleaning
-- [x] EDA
-- [x] Visualization
-- [x] Feature Engineering
-- [x] Rule-Based Bot Detection
-- [ ] Isolation Forest
-- [ ] Power BI Dashboard
-- [ ] Marketing Insights
-
----
-
-# 📜 License
-
-This project is created for educational purposes and portfolio demonstration.
-
----
-
-## 👨‍💻 Author
-
-**Pranav Pawar**
-
-GitHub: https://github.com/Pranav497

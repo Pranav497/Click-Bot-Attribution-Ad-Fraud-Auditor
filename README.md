@@ -3,7 +3,6 @@
 A Data Analytics and Machine Learning project that analyzes Google Analytics 4 (GA4) event data to identify suspicious traffic, detect potential bot behavior, and improve the reliability of digital marketing attribution.
 
 The project combines data cleaning, exploratory data analysis, feature engineering, rule-based detection, session-level analysis, and Isolation Forest anomaly detection.
-
 ---
 
 ## 📌 Project Overview

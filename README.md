@@ -2,7 +2,7 @@
 
 > Detect suspicious website sessions using Machine Learning and visualize fraudulent traffic using an interactive Power BI dashboard.
 
-![Dashboard](./images/full-dashboard.png)
+![Dashboard]([./images/full-dashboard.png](https://github.com/Pranav497/Click-Bot-Attribution-Ad-Fraud-Auditor/blob/main/dashboard/Full%20Dashboard.png))
 
 ---
 

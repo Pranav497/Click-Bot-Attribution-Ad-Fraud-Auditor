@@ -1,9 +1,6 @@
 # 🛡️ Click-Bot Attribution & Ad-Fraud Auditor
 
 > Detect suspicious website sessions using Machine Learning and visualize fraudulent traffic using an interactive Power BI dashboard.
-
-![Dashboard]([./images/full-dashboard.png](https://github.com/Pranav497/Click-Bot-Attribution-Ad-Fraud-Auditor/blob/main/dashboard/Full%20Dashboard.png))
-
 ---
 
 # 📌 Project Overview
@@ -112,8 +109,7 @@ Google Analytics Dataset
 # 📊 Dashboard Preview
 
 ## Full Dashboard
-
-![Dashboard](./images/full-dashboard.png)
+[Dashboard]
 
 ---
 
@@ -121,7 +117,7 @@ Google Analytics Dataset
 
 Shows session distribution across Desktop, Mobile and Tablet users.
 
-![Device](./images/session-desktop.png)
+[Device]
 
 ---
 
@@ -129,7 +125,7 @@ Shows session distribution across Desktop, Mobile and Tablet users.
 
 Visualizes website traffic by country.
 
-![Country](./images/session-country.png)
+[Country]
 
 ---
 
@@ -218,26 +214,6 @@ Some observations from the analysis:
 
 ---
 
-# 📸 Screenshots
-
-### Dashboard Overview
-
-![Dashboard](./images/full-dashboard.png)
-
----
-
-### Device Distribution
-
-![Desktop](./images/session-desktop.png)
-
----
-
-### Country Distribution
-
-![Country](./images/session-country.png)
-
----
-
 # ▶ How to Run
 
 Clone the repository
@@ -299,7 +275,7 @@ https://github.com/Pranav497
 
 LinkedIn
 
-(Add your LinkedIn URL)
+(www.linkedin.com/in/pranav-pawar-a8ab96276L)
 
 ---
 
